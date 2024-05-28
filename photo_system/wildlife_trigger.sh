@@ -35,11 +35,15 @@ do
         last_processed_time=$current_time
 
         # Append timestamp to the message 
+        
 
-        echo "Message received:"
+	echo "Wildlife trigger activated: "
      # Actions when receiving message goes in here ---------------
-        ./take_photo.sh Trigger
+        val=$(./take_photo.sh Trigger)
 
+        # Extracting the first and second values from the full output
+        jpg_address=$(echo "$val" | sed -n '1p')  # Extracting the first line
+        json_address=$(echo "$val" | sed -n '2p')  # Extracting the second line
 
 
      # end ------------------------------------------------------

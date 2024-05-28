@@ -56,7 +56,7 @@ then # Every 10 seconds
     then
       # Motion was detected
       # Remove the first foto, and mark the second foto with trigger motion
-      echo "motion detected: " $second_foto_json
+      echo "motion detected saving most recent image: "
       
       image_json=$(cat $second_foto_json)
       echo image_json

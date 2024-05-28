@@ -12,7 +12,7 @@ while true; do
         jpg_address=$(echo "$val" | sed -n '1p')  # Extracting the first line
         json_address=$(echo "$val" | sed -n '2p')  # Extracting the second line
 
-        echo "Photo taken due to time: " $jpg_address
+        echo "Photo taken due to time: "
         time_start=$(date +%s) # Reset timer
     fi
     sleep 1 # Avoid spam loop
