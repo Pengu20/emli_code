@@ -22,8 +22,6 @@ while true; do
   # Parse JSON data and extract rain_detect value
   rain_detect=$(echo "$data" | jq -r '.rain_detect // 0')
 
-  echo $rain_detect
-
   if ! [ -z $rain_detect ]; then
   if [ $rain_detect == 1 ]; then
      echo "sending wipe request"
